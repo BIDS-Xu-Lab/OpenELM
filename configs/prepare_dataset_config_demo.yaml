@@ -1,0 +1,16 @@
+base_model: meta-llama/Llama-3.1-8B-Instruct
+train_ratio: 0.95
+input_dir: "demo_dataset"
+output_dir: "demo_dataset/llama_2tasks_dataset"
+tasks:
+  - task_name: "embedding2abstract"
+    target_text_file: "20K_trial_abstracts.pkl"
+    embedding_files:
+      - "20K_trial_embeddings.npy"
+    prompt_template: "Write an abstract about the following embedding: {emb_token}"
+  - task_name: "embeddings2comparison"
+    target_text_file: "20K_trial_commonality_analyses.pkl"
+    embedding_files:
+      - "20K_trial_commonality_embs_i.npy"
+      - "20K_trial_commonality_embs_j.npy"
+    prompt_template: "List five commonalities between the first abstract {emb_token} and the second abstract {emb_token}"

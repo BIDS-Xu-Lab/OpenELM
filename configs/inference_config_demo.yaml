@@ -1,0 +1,18 @@
+backbone_model_path: "demo_dataset/base_elm_Llama-3.1-8B-Instruct"
+peft_model_id: "demo_dataset/base_elm_Llama-3.1-8B-Instruct_lora/checkpoint-1187"
+device: "cuda"
+input_dir: "demo_dataset"
+output_dir: "demo_dataset/llama_2tasks_inference_output"
+tasks:
+  - task_name: "embedding2abstract"
+    embedding_files:
+      - "100_testing_trial_embeddings.npy"
+    prompt_template: "Write an abstract about the following embedding: {emb_token}"
+  - task_name: "embeddings2comparison"
+    embedding_files:
+      - "100_testing_trial_commonality_embs_i.npy"
+      - "100_testing_trial_commonality_embs_j.npy"
+    prompt_template: "List five commonalities between the first abstract {emb_token} and the second abstract {emb_token}"
+batch_size: 16
+repetition_penalty: 1.2
+max_length: 512
