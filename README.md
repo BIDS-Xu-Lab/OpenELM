@@ -17,12 +17,13 @@ pip install -r requirements.txt
 
 # 🚀 Quick Start
 
-1. Adapt Llama model into ELM using demonstration dataset in `demo_dataset` folder (take less than 1 hour if using single H100):
+1. Download demo_dataset.zip from the [latest release](https://github.com/BIDS-Xu-Lab/OpenELM/releases/download/v1.0/demo_dataset.zip) and unzip it into the project root directory.
+2. Adapt Llama model into ELM using demonstration dataset in `demo_dataset` folder (take less than 1 hour if using single H100):
     ```bash
     bash run_demo.sh
     ```
     💡 This bash script is a running example and wraps the following three steps: Data Preparation → Model Initialization → Training. Please go documentation for detailed usage.
-2. Perform inference using trained ELM
+3. Perform inference using trained ELM
     ```bash
     python inference.py --config configs/inference_config_demo.yaml
     ```
