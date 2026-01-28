@@ -145,6 +145,15 @@ python inference.py --config configs/your_inference_config.yaml
 # 📝 Citation
 If you find OpenELM helpful, please star our repo and cite us:
 ```bibtex
+@misc{ondov2026ctelmdecodingmanipulatingembeddings,
+      title={ctELM: Decoding and Manipulating Embeddings of Clinical Trials with Embedding Language Models}, 
+      author={Brian Ondov and Chia-Hsuan Chang and Yujia Zhou and Mauro Giuffrè and Hua Xu},
+      year={2026},
+      eprint={2601.18796},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2601.18796}, 
+}
 ```
 
 We gratefully acknowledge the Google Research [ELM paper](https://openreview.net/forum?id=qoYogklIPz) for inspiration and foundational ideas.
